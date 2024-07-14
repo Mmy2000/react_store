@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+/* .product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+} */
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product .btn2 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.product:hover .btn2 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.row{
+    @apply flex flex-wrap py-8 items-center px-4
+}
+.btn{
+    @apply px-3 py-2  rounded-lg text-white bg-green-600
+}
+.btn2{
+    @apply px-1 py-1  rounded-lg text-white bg-green-600
+}
+.category-image{
+    height: 200px;
+}
+.cover{
+    @apply absolute top-0 right-0 flex items-start justify-center left-0 bottom-0  ;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    opacity: 0.7;
+    background-color: rgba(170, 164, 164 , 0.7);
+    
+}
+.brand{
+    overflow: hidden;
+}
+.brand:hover .cover{
+    transform: translateY(0);
+}
